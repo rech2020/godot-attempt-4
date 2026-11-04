@@ -1,0 +1,20 @@
+[gd_resource type="AnimatedTexture" format=3 uid="uid://ipj7f0hq8cb5"]
+
+[ext_resource type="Texture2D" uid="uid://bc1010ymx0ots" path="res://Template Text1.png" id="1_tenql"]
+[ext_resource type="Texture2D" uid="uid://msdjlm3cf7h2" path="res://Template Text2.png" id="2_m4apv"]
+[ext_resource type="Texture2D" uid="uid://dmtu7jos4qttt" path="res://Template Text3.png" id="3_plnvf"]
+[ext_resource type="Texture2D" uid="uid://dwdd0fmvabilx" path="res://Template Text4.png" id="4_m7bwn"]
+[ext_resource type="Texture2D" uid="uid://b5ld2oo60aaqd" path="res://Template Text5.png" id="5_l2hyv"]
+
+[resource]
+frames = 5
+speed_scale = 25.0
+frame_0/texture = ExtResource("1_tenql")
+frame_1/texture = ExtResource("2_m4apv")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_plnvf")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_m7bwn")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("5_l2hyv")
+frame_4/duration = 1.0
