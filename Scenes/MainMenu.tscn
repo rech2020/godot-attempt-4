@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://b4aum61b8vfb1" path="res://Assets/bad.png" id="1_853f1"]
 [ext_resource type="Texture2D" uid="uid://bc26nl88wfmpa" path="res://Assets/Aqua.png" id="2_8saeu"]
+[ext_resource type="Texture2D" uid="uid://ipj7f0hq8cb5" path="res://Assets/Template Text/template_text_animated.tres" id="3_ghw46"]
+[ext_resource type="Theme" uid="uid://baspl6ays3nke" path="res://Resources/Themes/Horse pun.tres" id="4_df05h"]
 
 [node name="Control" type="Control" unique_id=1442745489]
 layout_mode = 3
@@ -21,13 +23,116 @@ grow_vertical = 2
 texture = ExtResource("1_853f1")
 stretch_mode = 1
 
+[node name="FunnyParticleEmitter" type="Control" parent="." unique_id=1733200906]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ParticleEmitter" type="CPUParticles2D" parent="FunnyParticleEmitter" unique_id=1697400448]
+texture = ExtResource("2_8saeu")
+preprocess = 2.0
+explosiveness = 0.2
+randomness = 0.5
+lifetime_randomness = 0.25
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 1000.0
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+
 [node name="MenuContainer" type="MarginContainer" parent="." unique_id=1613882315]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Logo Margin" type="MarginContainer" parent="MenuContainer" unique_id=1893205317]
+layout_mode = 2
+theme_override_constants/margin_top = 24
+
+[node name="TextureRect" type="TextureRect" parent="MenuContainer/Logo Margin" unique_id=2120410079]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("3_ghw46")
+stretch_mode = 3
+
+[node name="MenuButtonMargin" type="MarginContainer" parent="MenuContainer" unique_id=557454357]
+layout_mode = 2
+theme_override_constants/margin_top = 136
+theme_override_constants/margin_bottom = 8
+
+[node name="Control" type="Control" parent="MenuContainer/MenuButtonMargin" unique_id=1979972491]
+layout_mode = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="MenuContainer/MenuButtonMargin/Control" unique_id=1735731554]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -22.0
+offset_right = 20.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+vertical = true
+
+[node name="NewGameButton" type="Button" parent="MenuContainer/MenuButtonMargin/Control/BoxContainer" unique_id=855142585]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_df05h")
+text = "New Game"
+
+[node name="ContinueGameButton" type="Button" parent="MenuContainer/MenuButtonMargin/Control/BoxContainer" unique_id=1886666297]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme = ExtResource("4_df05h")
+text = "Continue"
+
+[node name="LevelSelectButton" type="Button" parent="MenuContainer/MenuButtonMargin/Control/BoxContainer" unique_id=666797087]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme = ExtResource("4_df05h")
+text = "Level Select"
+
+[node name="OptionsButton" type="Button" parent="MenuContainer/MenuButtonMargin/Control/BoxContainer" unique_id=1186882408]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_df05h")
+text = "Options"
+
+[node name="CreditsButton" type="Button" parent="MenuContainer/MenuButtonMargin/Control/BoxContainer" unique_id=626610578]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_df05h")
+text = "Credits"
+
+[node name="HorseButton" type="Button" parent="MenuContainer/MenuButtonMargin/Control/BoxContainer" unique_id=2134994405]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_df05h")
+text = "horse"
+
+[node name="ExitButton" type="Button" parent="MenuContainer/MenuButtonMargin/Control/BoxContainer" unique_id=97395471]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_df05h")
+text = "Exit"
 
 [node name="VersionMargin" type="MarginContainer" parent="." unique_id=154340914]
 layout_mode = 1
@@ -59,26 +164,3 @@ grow_vertical = 0
 text = "v0.0.00001"
 horizontal_alignment = 2
 vertical_alignment = 2
-
-[node name="FunnyParticleEmitter" type="Control" parent="." unique_id=1733200906]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ParticleEmitter" type="CPUParticles2D" parent="FunnyParticleEmitter" unique_id=1697400448]
-texture = ExtResource("2_8saeu")
-preprocess = 2.0
-explosiveness = 0.2
-randomness = 0.5
-lifetime_randomness = 0.25
-direction = Vector2(0, 0)
-spread = 180.0
-gravity = Vector2(0, 0)
-initial_velocity_max = 1000.0
-scale_amount_min = 0.5
-scale_amount_max = 0.5
