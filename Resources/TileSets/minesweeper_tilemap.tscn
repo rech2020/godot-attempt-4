@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bk1apbghnl5uo"]
+
+[ext_resource type="Script" uid="uid://dt320msi3cobh" path="res://Resources/TileSets/minesweeper_tilemap.gd" id="1_2yvrw"]
+[ext_resource type="TileSet" uid="uid://df2tqh0c552ma" path="res://Resources/TileSets/Bg.tres" id="1_7b44h"]
+
+[node name="Main" type="Node2D" unique_id=115551097]
+position = Vector2(0, -1)
+script = ExtResource("1_2yvrw")
+
+[node name="BGTile" type="TileMapLayer" parent="." unique_id=809448801]
+tile_set = ExtResource("1_7b44h")
+
+[node name="BombTile" type="TileMapLayer" parent="." unique_id=1950171769]
+
+[node name="NumbersTile" type="TileMapLayer" parent="." unique_id=1178459867]
+
+[node name="CoverTile" type="TileMapLayer" parent="." unique_id=1384161824]
+
+[node name="FlagTile" type="TileMapLayer" parent="." unique_id=1449188475]
+
+[node name="HoverTile" type="TileMapLayer" parent="." unique_id=898893480]

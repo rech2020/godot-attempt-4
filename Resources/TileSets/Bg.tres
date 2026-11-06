@@ -1,0 +1,27 @@
+[gd_resource type="TileSet" format=3 uid="uid://df2tqh0c552ma"]
+
+[ext_resource type="Texture2D" uid="uid://da5vpfk7uxryq" path="res://Assets/MinesweeperSpritesheet.png" id="1_bbh3i"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_x3sfe"]
+tile_data = PackedInt32Array(0, 0, 0, 65536, 65536, 0, 1, 65536, 0, 65537, 0, 0)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_raqdb"]
+texture = ExtResource("1_bbh3i")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_raqdb")
+pattern_0 = SubResource("TileMapPattern_x3sfe")
